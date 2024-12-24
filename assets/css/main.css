@@ -27,6 +27,8 @@
   --blue-gray: #455A64;
   --black: #000;
   --white: #FFF;
+
+  --haccent: #673ab7;
 }
 @supports (font-variation-settings: normal) {
   :root { font-family: InterVariable,  sans-serif;
@@ -67,6 +69,17 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 525px) {
+  header {
+    flex-direction: column;
+  }
+  header ul {
+    padding-left: 0;
+  }
+  header li:first-child {
+    margin-left: 0px;
+  }
+}
 
 header ul {
   display: flex;
@@ -79,7 +92,7 @@ header li {
 }
 
 header a {
-  color: white;
+  color: var(--fg);
   text-decoration: none;
 }
 
@@ -127,6 +140,11 @@ footer a {
 main {
   padding: 0 4em;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 0.25em;
+  }
+}
 
 main h1 {
   font-size: 2.5em;
@@ -146,8 +164,11 @@ img {
   margin-top: -0.75em;
   margin-bottom: 0.5em;
 }
-.data {
-  color: #ccc;
+.data { color: #555; }
+@media (prefers-color-scheme: dark) {
+  .data {
+    color: #ccc;
+  }
 }
 
 .content a {
