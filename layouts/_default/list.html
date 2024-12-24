@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div style="width: 95%; margin: auto;">
+  <h1><span class="tag">#{{ .Title }}</span></h1>
+
+  {{ .Content }}
+
+  {{ range .Pages }}
+    <div style="margin-left: 2em">
+      <a href="{{ .RelPermalink }}" style="font-size: 150%; margin-bottom: 0px; color: white; text-decoration: none">{{ .LinkTitle }}</a>
+      <p style="margin-top: 4px" class="data">{{ .Date | time.Format ":date_long" }} • {{ .ReadingTime }} min • {{ partial "tags.html" (dict "taxonomy" "tags" "page" .) }}</p>
+
+    </div>
+  {{ end }}
+</div>
+{{ end }}

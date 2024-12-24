@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<div class="tag-container">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+        {{- $name := .Name }}
+        {{- $count := .Count }}
+        {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+            <a href="{{ .Permalink }}" class="tag" style="font-size: 150%;">#{{ .Name }}</a>
+        {{- end }}
+    {{- end }}
+</div>
+{{ end }}

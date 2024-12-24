@@ -1,0 +1,220 @@
+/* root */
+:root {
+  /* Font */
+  font-family: Inter, sans-serif;
+  /* font-feature-settings: 'liga' 1, 'calt' 1; */ /* fix for Chrome */
+  font-feature-settings: 'liga' 0, 'calt' 0;
+
+  /* Material colors (700) */
+  --red: #D32F2F;
+  --pink: #C2185B;
+  --purple: #7B1FA2;
+  --deep-purple: #512DA8;
+  --indigo: #303F9F;
+  --blue: #1976D2;
+  --light-blue: #0288D1;
+  --cyan: #0097A7;
+  --teal: #00796B;
+  --green: #388E3C;
+  --light-green: #689F38;
+  --lime: #AFB42B;
+  --yellow: #FBC02D;
+  --amber: #FFA000;
+  --orange: #F57C00;
+  --deep-orange: #E64A19;
+  --brown: #5D4037;
+  --gray: #616161;
+  --blue-gray: #455A64;
+  --black: #000;
+  --white: #FFF;
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable,  sans-serif;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Accent colors */
+    --bg: #121212;
+    --fg: white;
+    --accent: #673ab7;
+    --haccent: #b39ddb;
+  }
+}
+
+/* General layout */
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2em;
+  line-height: 1.5;
+
+  text-align: justify;
+}
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+  padding: 1.25em 0;
+}
+
+/* Menu bar */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: auto 0;
+}
+
+header li {
+  margin: 0 10px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Foot */
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+  padding: 1em 0;
+  display: block;
+  text-align: center;
+}
+
+footer a {
+  color: var(--fg)
+}
+
+/* Archive */
+.archive-year:not(:last-child) {
+  border-bottom: 1px solid #444;
+}
+
+/* Tags */
+.tag {
+  background-color: #673ab722;
+  color: var(--haccent);
+
+  margin: 0px 2px;
+  padding: 2px 0.5em;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+.tag:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tag-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Body */
+main {
+  padding: 0 4em;
+}
+
+main h1 {
+  font-size: 2.5em;
+  line-height: 1;
+  /*margin-bottom: -0.35em;*/
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* single */
+.desc {
+  font-size: 150%;
+  line-height: 1;
+  margin-top: -0.75em;
+  margin-bottom: 0.5em;
+}
+.data {
+  color: #ccc;
+}
+
+.content a {
+  color: var(--haccent);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+}
+
+.content p:first-of-type:first-letter {
+  float: left;
+  font-size: 3rem;
+  line-height: 0.65;
+  margin: 0.1em 0.1em 0.1em 0;
+}
+/* .contenido h1 { margin-bottom: -0.45em; } */
+/*.data { margin-top: -0.5em; }*/
+
+/* Code blocks */
+.highlight code {
+  font-family: "FiraCode Nerd Font";
+
+  display: grid;
+  margin: auto 0;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.highlight pre {
+  border-radius: 4px;
+
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+p code, li code {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  font-family: "FiraCode Nerd Font";
+  font-size: 90%;
+  padding: 4px;
+
+  border-radius: 4px;  /* Para inline code block */
+}
+
+/* Imagen */
+img {
+  max-width: 95%;
+
+  border-radius: 4px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  line-height: 0.5;
+  margin-bottom: 2em;
+}
+
+/* Tables */
+th, td {
+  border: 1px solid #222;
+  padding: 4px 12px;
+}
+table { border-collapse: collapse; margin: 0 auto; text-align: center; }
+tr:nth-child(2n) {
+  background-color: #333;
+}
+
+/* Task lists */

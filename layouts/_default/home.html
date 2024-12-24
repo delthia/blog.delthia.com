@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  <h2><span>Últimas entradas</h2>
+  <ul>{{ range site.RegularPages | first 5}}
+    <li>
+      <a href="{{ .RelPermalink }}" style="font-size: 150%; color: white; text-decoration: none;">{{ .LinkTitle }}</a> <small>{{ .Date | time.Format "Jan, 2" }}</small>
+    </li>
+  {{ end }}</ul>
+{{ end }}

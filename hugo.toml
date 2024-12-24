@@ -1,0 +1,32 @@
+baseURL = 'https://example.org/'
+languageCode = 'es-ES'
+title = 'blog.delthia.com'
+
+[markup]
+  [markup.highlight]
+    style="catppuccin-mocha"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+[params]
+  math=false
+
+[[menus.main]]
+name = 'Inicio'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Entradas'
+pageRef = '/archive'
+weight = 20
+
+[[menus.main]]
+name = 'Etiquetas'
+pageRef = '/tags'
+weight = 30
