@@ -57,6 +57,10 @@ body {
 
   text-align: justify;
 }
+@media (max-width: 525px) {
+  body { padding: 0 1em; }
+}
+
 
 header {
   border-bottom: 1px solid #222;
