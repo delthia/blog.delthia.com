@@ -75,7 +75,7 @@ Además de los servicios descritos aquí, tengo otras utilidades, como un servid
 
 El resultado final es el que se puede ver en este diagrama:
 
-![Network Diatram](raspi-ii.png)
+![Network Diatram](raspi.png)
 
 NGINX está escuchando por el puerto 443 (HTTPS) solo por ipv6, así que utilizo el proxy de cloudflare para que mi sitio web sea accesible también desde ipv4. Algunos servicios, los que están asignados en un subdominio de `local.delthia.com`, están limitados a la red local y a la de la VPN.
 
