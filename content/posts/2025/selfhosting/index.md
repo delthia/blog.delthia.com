@@ -23,7 +23,7 @@ Podía tener una red de varios nodos de proxmox, con un RAID con 20 discos y tod
 
 ## Hardware
 
-El hardware no podría ser más sencillo: una Raspberry Pi 4 de 4GB conectada a un SSD de 1TB con un adaptador de USB a SATA. Hasta ahora siempre tuvo una micro SD, primero de 16Gb y luego de 32Gb, pero al añadir el SSD tengo más espacio para utilizar con syncthing, e incluso un servidor NFS, además de que moví ahí el sistema.
+El hardware no podría ser más sencillo: una Raspberry Pi 4 de 4GB conectada a un SSD de 1TB con un adaptador de USB a SATA. Hasta ahora siempre tuvo una micro SD, primero de 16GB y luego de 32GB, pero al añadir el SSD tengo más espacio para utilizar con syncthing, e incluso un servidor NFS, además de que moví ahí el sistema.
 
 La Raspberry está conectada por ethernet al router a través de un switch y ahí empieza y termina toda la complejidad del sistema.
 
